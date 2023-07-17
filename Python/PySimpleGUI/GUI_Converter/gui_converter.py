@@ -1,23 +1,28 @@
 import PySimpleGUI as psg
 
-# each [] list represents its own line/row
-layout = [[psg.Text('String of text'), psg.Spin(['item 1', 'item 2'])],  # top row
-          [psg.Button('Button of click')],
-          [psg.Input()],
-          [psg.Text('Test'), psg.Button('Test Button')]]
+textbox_input = psg.Input(key='-INPUT-')
+spinner_units = psg.Spin(['KM -> M', 'M -> CM', 'CM -> MM'], key='-SPINNER-')
+button_convert = psg.Button('Convert', key='-BUTTON-')
+label_output = psg.Text('Output: ')
+label_result = psg.Text(' ', key='-LABEL-')
 
-this_window = psg.Window('Converter', layout)
+layout = [[textbox_input, spinner_units, button_convert],
+          [label_output, label_result]]
+
+converter_window = psg.Window('Basic Unit Converter1.0', layout)
 
 while True:
-    event, values = this_window.read()
-    print(f"\n1 . Window event is: {event}")
-    print(f"2 . Window values are: {values}")
+    event, values = converter_window.read()
+
+    if event == '-SPINNER-':
+        print(values['-SPINNER-'])
+
+    if event == '-BUTTON-':
+        grab_value = values['-INPUT-']
+        print(grab_value)
 
     if event == psg.WINDOW_CLOSED:
-        print(f"## This triggers termination! ##")
+        print('terminate called')
         break
 
-    if event == 'Button of click':
-        print(f"## This triggers {event}/event and captures {values}/values ##")
-
-this_window.close()
+converter_window.close()
