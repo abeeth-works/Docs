@@ -13,12 +13,12 @@ def then_there_was_zip(name, theme):
     layout=[[psg.Text('', key='-LABEL-')],
             [psg.Text('Select files to compress:'),
              psg.Input(key='-BROWSE_WIN-'),
-             psg.FileBrowse('Browse',
+             psg.FilesBrowse('Browse',
                             key='-BROWSE-')],
             [psg.Text('Select destination folder:'),
              psg.Input(key='-DEST_WIN-'),
-             psg.FileBrowse('Set',
-                            key='-DEST-')],
+             psg.FolderBrowse('Set',
+                              key='-DEST-')],
             [psg.Button('Zip!', key='-ZIP-')]]
 
     return psg.Window(name, layout)
