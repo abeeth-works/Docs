@@ -25,6 +25,16 @@ All of the reference notes from multiple projects/languages will be categorised 
       
       - Window setup _(init, window.read(), window.close())_
       - Layouts
+      
+        - Generating through lists [**DISPLAY**] [[repo]](https://github.com/abeeth-works/Docs/blob/1da164f90e281afe707d38f207f8ac273fdf0f1a/Python/PySimpleGUI/Calculator/Calc.py)
+                        
+              button_labels = ['0', '1', '2', '3', '4']
+              my_layout = []
+              for label in button_labels:
+                  my_layout.append([psg.Button(label, key=label)])
+              
+              layout = my_layout
+        
       - Events and Values
-      - Theming _(psg.theme(), psg.set_options())_
+      - Theming **(psg.theme(), psg.set_options())**
     - Task Manager app for 60 Days [[repo]](https://github.com/abeeth-works/Task-Manager-GUI-App.git)
