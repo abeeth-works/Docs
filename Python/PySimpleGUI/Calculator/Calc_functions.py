@@ -2,7 +2,7 @@ import PySimpleGUI as psg
 
 
 def test_function(event, values, window_name):
-    window_name['log'].update(f"{event} | {values}")
+    window_name['log'].update(f"Event - {event} || Values - {values}")
     print(f"Event - {event} ||| Values - {values}")
 
 
