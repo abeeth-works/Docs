@@ -12,7 +12,6 @@ while True:
 
     if event == psg.WINDOW_CLOSED:
         break
-
     if event == '-ZIP-':
         print(values)
         filestring_to_zip = values['-BROWSE_WIN-']
