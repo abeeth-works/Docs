@@ -8,13 +8,31 @@ All of the reference notes from multiple projects/languages will be categorised 
 
 ### Python
 
-- PySimpleGUI for interfaces
+- #### PySimpleGUI for interfaces
 
     - Installation and setup
-    - Base Unit Converter app [[repo]](https://github.com/abeeth-works/Docs/tree/7e0565a26237c5609a6b788a0bfff8deb4b0df18/Python/PySimpleGUI/GUI_Converter)
-    - Calculator app [[repo*]]()
+    - **Base Unit Converter app** [[repo]](https://github.com/abeeth-works/Docs/tree/7e0565a26237c5609a6b788a0bfff8deb4b0df18/Python/PySimpleGUI/GUI_Converter)
+    - **Calculator** app [[repo*]]()
       
       - Window setup _(init, window.read(), window.close())_
+      
+            import PySimpleGUI as psg
+            #  window title goes as the first argument for .window()
+            #  layout is [[]] => with each inner [] representing a row
+            #  below window is 4 lines tall
+            window = psg.Window("TaskMan v1.17",
+               layout=[[time_label],
+                       [task_list_box],
+                       [type_task_label, input_task_box],
+                       [add_task_button, edit_task_button, delete_task_button,
+                       exit_button]],
+                       font=('Helvetica', 20))
+            while True:
+                event, values = window.read()
+                if event == psg.WIN_CLOSED:
+                    break
+            window.close()
+      
       - Layouts
       
         - Generating through lists [**DISPLAY**] [[repo]](https://github.com/abeeth-works/Docs/blob/1da164f90e281afe707d38f207f8ac273fdf0f1a/Python/PySimpleGUI/Calculator/Calc.py)
@@ -28,7 +46,7 @@ All of the reference notes from multiple projects/languages will be categorised 
         
       - Events and Values
       - Theming **(psg.theme(), psg.set_options())**
-    - Task Manager app for 60 Days [[repo]](https://github.com/abeeth-works/Task-Manager-GUI-App.git)
+    - **Task Manager App** for 60 Days [[repo]](https://github.com/abeeth-works/Task-Manager-GUI-App.git)
 
 - CSV Processing
 
