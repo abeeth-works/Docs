@@ -18,12 +18,13 @@ while True:
         filestring_to_zip = values['-BROWSE_WIN-']
         filepaths_to_zip = filestring_to_zip.split(';')
         destination_filepath = values['-DEST_WIN-']
-        openfile_arg = f"{destination_filepath}/zippo.zip"
+
         # REMOVE POST TESTING
         fz_window['-LABEL-'].update(value=filepaths_to_zip)
-        # use a FOR LOOP to iterate through all filepaths
-        for filepath in filepaths_to_zip:
-            print(filepath)
-            with open(openfile_arg, 'w') as zip_file:
-                zip_file.write(filepath)
+
+        fzf.zip_me(filepaths_to_zip, destination_filepath)
+
+        output = f"Zippo now lives at {destination_filepath}"
+        fz_window['-LABEL-'].update(value=output)
+        # fz_window['-']
 fz_window.close()
