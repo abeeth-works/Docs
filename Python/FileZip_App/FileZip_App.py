@@ -26,5 +26,12 @@ while True:
 
         output = f"Zippo now lives at {destination_filepath}"
         fz_window['-LABEL-'].update(value=output)
-        # fz_window['-']
+
+    if event == '-RESET-':
+        print('flush invoked')
+        fz_window['-BROWSE_WIN-'].update(value=' ')
+        fz_window['-DEST_WIN-'].update(value=' ')
+        # fz_window['-BROWSE-'].update(values=' ')
+        # fz_window['-DEST-'].reset_group()
+
 fz_window.close()
