@@ -67,7 +67,7 @@ All of the reference notes from multiple projects/languages will be categorised 
               window = sg.Window('Columns', layout)
               window.read()
               window.close()
-
+ 
       - Events and Values
       - Theming **(psg.theme(), psg.set_options())**
     - **Task Manager App** for 60 Days [[repo]](https://github.com/abeeth-works/Task-Manager-GUI-App.git)
