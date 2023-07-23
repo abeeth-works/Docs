@@ -71,6 +71,8 @@ All of the reference notes from multiple projects/languages will be categorised 
       - Events and Values
       - Theming **(psg.theme(), psg.set_options())**
     - **Task Manager App** for 60 Days [[repo]](https://github.com/abeeth-works/Task-Manager-GUI-App.git)
+    - **Creating executables**
+    >
 
 - CSV Processing
 
