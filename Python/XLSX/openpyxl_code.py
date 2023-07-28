@@ -21,4 +21,4 @@ number_of_columns = active_sheet_object.max_column  # 4. cell object has row, co
 
 for row in active_sheet_object.iter_rows():
     for cell in row:
-        print(f'{row}/{cell.value}')
+        print(cell.value)
